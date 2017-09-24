@@ -58,6 +58,7 @@ module.exports = {
 		data['lists'] = lists;
 		fs.writeFileSync(lists_file_path, JSON.stringify(data), "utf8");
 
+		new_list.cards = [];
 		return new_list;
 	},
 	getCards: function() {
