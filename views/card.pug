@@ -1,0 +1,9 @@
+extends layout
+
+block content
+
+block scripts
+	script(type="text/javascript").
+		var card = #{card}
+		App.showCard(card);
+

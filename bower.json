@@ -1,0 +1,22 @@
+{
+  "name": "musicstore",
+  "description": "",
+  "main": "",
+  "authors": [
+    "'Agape' <'lisaacjunior@yahoo.com'>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "handlebars": "^4.0.10",
+    "backbone": "^1.3.3"
+  }
+}

@@ -1,0 +1,1229 @@
+@import url("whitespace-reset.css");
+body {
+	font: normal 14px "Roboto", Helvetica, Arial, sans-serif;
+	height: 100%;
+	padding: 0;
+	margin: 0 0 -45px 0;
+}
+tbody {
+	white-space: normal;
+} 
+main {
+	white-space: nowrap;
+}
+.list, #new_list {
+	white-space: normal;
+}
+header {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	padding: 5px 0;
+	height: 40px;
+	box-sizing: border-box;
+	background: rgba(2, 106, 167, 1);
+	color: #fff;
+}
+header:after {
+	clear: both;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+header a {
+	text-decoration: none;
+	color: inherit;
+}
+header h2 {
+	font-weight: bold;
+	vertical-align: middle;
+	height: 30px;
+	padding: 5px;
+	margin-left: 10px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border: none;
+	background: rgba(255, 255, 255, .3);
+}
+header h2 i {
+	display: inline-block;
+	font-weight: bold;
+}
+header h2,
+header h1,
+header #info,
+header #search {
+	vertical-align: middle;
+	display: inline-block;
+}
+header #search {
+	position: relative;
+}
+header h1 img {
+	vertical-align: middle;
+	height: 20px;
+	padding: 5px 0;
+	width: auto;
+}
+header input {
+	width: 180px;
+	height: 30px;
+	padding: 0 60px 0 10px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-left: 5px;
+	border: none;
+	background: rgba(255, 255, 255, .3);
+}
+#search .fa-search {
+	vertical-align: middle;
+	margin-left: -25px;
+	transform: rotate(90deg);
+}
+header .fa + .fa {
+	display: none;
+}
+header input:focus {
+	margin-left: -16px;
+	width: 300px;
+	background: #fff;
+}
+header input:focus + .r {
+	display: none;
+}
+header input:focus ~ .a {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: -40px;
+	color: #4d4d4d;
+}
+header #info a {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px;
+	width: 20px;
+	font-size: 1.1em;
+	padding: 5px 8px;
+	border-radius: 4px;
+	border: none;
+	background: rgba(255, 255, 255, .3);
+}
+header #info a:hover {
+	background: rgba(255, 255, 255, .6);
+}
+header h1 a {
+	position: fixed;
+	top: 5px;
+	left: 49%;
+	display: inline-block;
+	background: transparent;
+}
+#search_results {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 85px;
+	padding: 10px;
+	width: 600px;
+	max-height: 500px;
+	z-index: 2;
+	color: #333;
+	text-align: left;
+	overflow: auto;
+	box-sizing: border-box;
+	font-weight: normal;
+	font-size: 1em;
+	border-radius: 4px;
+	background: #E2E4E6;
+}
+#search_results h2 {
+	display: inline-block;
+}
+#search_results a {
+	text-decoration: underline;
+	text-align: right;
+	background: inherit;
+	color: inherit;
+}
+
+main {
+	width: 90%;
+	margin: 70px auto;
+	color: #4d4d4d;
+	font-size: 14px;
+}
+main .boards {
+	margin: 15px 0;
+}
+.fa-user-o {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+.boards li {
+	width: 300px;
+	background: #d34555;
+	border-radius: 4px;
+	height: 100px;
+}
+.boards li a {
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 4px;
+}
+.boards li a .fa-star-o {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.boards li a:hover {
+	background: rgba(0, 0, 0, .3);
+}
+.boards li a:hover .fa-star-o {
+	display: inline-block;
+}
+.boards .fa-star-o:hover {
+	font-size: 1.5em;
+}
+
+.board {
+	background: rgba(211, 69, 85, .85);
+}
+.board header {
+	background: rgba(211, 69, 85, 1);
+}
+.board main {
+	display: inline-block;
+	width: 98%;
+	height: 91vh;
+	margin: 55px 10px 0 10px;
+	background: transparent;
+	overflow-x: auto;
+}
+.board main h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #fff;
+}
+.board main h2 a {
+	color: inherit;
+}
+.board main h2 a,
+.board main h2 .access {
+	font-size: .8em;
+	text-decoration: none;
+}
+.board h2 span,
+.board main h2 a {
+	padding: 8px;
+}
+.board .board_name:hover,
+.board main h2 a:hover {
+	background: rgba(0, 0, 0, .2);
+	border-radius: 6px;
+}
+.board .lists .list,
+.board .lists #new_list {
+	display: inline-block;
+	width: 280px;
+}
+.board .lists form input[type="text"] {
+	box-sizing: border-box;
+	width: 100%;
+}
+.lists {
+	margin: 15px 0 0 0;
+}
+.lists form {
+	display: none;
+	padding: 5px;
+	background: #ddd;
+	color: #4d4d4d;
+	border-radius: 4px;
+}
+.lists input[type="text"] {
+	width: 100%;
+	height: 40px;
+	border: none;
+	padding: 0 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.lists .add_list {
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	color: #f0f0f0;
+	cursor: pointer;
+	background: rgba(0, 0, 0, .2);
+}
+#new_list {
+	vertical-align: top;
+}
+.green {
+	background: green;
+	padding: 8px 20px;
+	cursor: pointer;
+	border: none;
+	margin: 5px 0;
+	color: #fff;
+	border-radius: 4px;
+	font-weight: bold;
+}
+.lists form a {
+	color: inherit;
+}
+.lists .fa-times {
+	font-size: 2em;
+	vertical-align: middle;
+}
+.list {
+	vertical-align: top;
+	display: inline-block;
+	padding: 0 10px;
+	margin-right: 10px;
+	border-radius: 4px;
+	color: #4d4d4d;
+	background: #ddd;
+	box-sizing: border-box;
+}
+.list_container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	max-height: 460px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.list_header {
+	padding: 8px 0;	
+	overflow: hidden;
+}
+.board .list_header h2,
+.list_header a {
+	vertical-align: middle;
+	color: #4d4d4d;
+	cursor: pointer;
+	display: inline-block;;
+}
+
+.list_header textarea,
+.new_card textarea,
+.card_view textarea {
+	display: none;
+	border: none;
+	width: 88%;
+	word-wrap: break-word;
+	padding: 4px 8px 0 8px;
+	box-sizing: border-box;
+	resize: none;
+	font: inherit;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.list_header textarea:focus {
+	border: none;
+}
+.list_header:after {
+	clear: both;
+}
+.list_header h2 {
+	font-size: 1em;
+	width: 88%;
+}
+.list_header a {
+	width: 9%;
+	vertical-align: top;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 5px;
+}
+.list_header a:hover {
+	background: rgba(0, 0, 0, .2);
+}
+.red {
+	background: red;
+}
+.greenn {
+	background: green;
+}
+.yellow {
+	background: yellow;
+}
+.blue {
+	background: blue;
+}
+.black {
+	background: black;
+}
+.brown {
+	background: brown;
+}
+.indigo {
+	background: indigo;
+}
+.violet {
+	background: violet;
+}
+.purple {
+	background: purple;
+}
+.pink {
+	background: pink;
+}
+.no_color {
+	background: grey;
+}
+.card {
+	position: relative;
+	cursor: pointer;
+	margin: 6px 0;
+	padding: 8px;
+	box-sizing: border-box;
+	background: #fff;
+	border-radius: 4px;
+}
+.card:hover > a {
+	display: block;
+}
+.card > a {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 4px;
+	color: inherit;
+	background: rgba(0, 0, 0, .2);
+}
+.card > a i {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	color: #fff;
+	font-size: 1.2em;
+	padding: 8px;
+	border-radius: 4px;
+}
+.card > a i:hover {
+	background: rgba(0, 0, 0, .4);
+}
+.card li {
+	display: inline-block;
+	width: 18%;
+	height: 8px;
+	box-sizing: border-box;
+	border-radius: 20px;
+	margin: 0 2px;
+}
+.card h3 {
+	font-weight: normal;
+	padding: 0;
+	font-size: 1em;
+	margin: 5px 0;
+}
+.card i {
+	font-size: .9em;
+	padding-right: 8px;
+}
+.new_card form {
+	padding: 0;
+	overflow: hidden;
+}
+.new_card > a {
+	display: inline-block;
+	margin: 0 -10px;
+	padding: 8px 10px 16px 10px;
+	width: 100%;
+	text-decoration: none;
+	color: inherit;
+}
+.new_card > a:hover {
+	text-decoration: underline;
+	background: rgba(0, 0, 0, .2);
+}
+.new_card textarea {
+	font-weight: normal;
+	font-size: 1em;
+	width: 100%;
+	margin: 10px 0;
+	display: block;
+	height: 80px;
+}
+.new_card .fa-ellipsis-h {
+	cursor: pointer;
+	font-size: 1.4em;
+	margin: 15px 0 0px 0;
+	padding: 3px 8px;
+	border-radius: 4px;
+}
+.new_card .fa-ellipsis-h:hover {
+	background: rgba(0, 0, 0, .3);
+}
+.new_card .fa-ellipsis-h:after {
+	clear: right;
+}
+
+.detailcard_view {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1; 
+	background: rgba(0, 0, 0, .3);
+	overflow-y: scroll;
+}
+.detailcard_view .cardy {
+	display: block;
+	position: relative;
+	z-index: 15;
+}
+.date_picker li span {
+	display: inline-block;
+	width: 160px;
+}
+.actions li {
+	width: 100%;
+	height: 40px;
+}
+.actions
+.date_picker {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: -80px;
+	z-index: 25;
+}
+.date_picker h4:after {
+	clear: both;
+}
+.card_view .date_picker .fa-times {
+	cursor: pointer;
+	margin-top: -10px;
+	padding: 0;
+}
+.card_view .date_picker h4 .right {
+	padding: 0;
+}
+.detailcard_view form {
+	display: block;
+}
+.actions > ul > li .date_picker {
+	width: 400px;
+}
+.date_picker form {
+	background: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.date_picker h4 {
+	text-align: center;
+	font-size: 1.2em;
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #ded;
+}
+.card_view .date_picker .right,
+.card_view .date_picker .left {
+	width: 40%;
+	padding-bottom: 40px;
+}
+.card_view .date_picker .right {
+	text-align: right;
+}
+.date_picker input[type='text'] {
+	border: 1px solid #ddd;
+}
+.date_picker input[type="time"] {
+	width: 100%;
+	font-size: 1.5em;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 4px 0;
+}
+.card_view .date_picker input.green,
+.card_view .date_picker button.reddish {
+	text-align: center;
+	width: 40%;
+	padding: 15px 20px;
+	box-sizing: border-box;
+}
+button.reddish {
+	cursor: pointer;
+	background: #d34555;
+	border: none;
+	color: #fff;
+	border-radius: 4px;
+}
+.card_view li .edit_date,
+.card_view li .move_card,
+.card_view li .copy_card,
+.card_view li .edit_labels {
+	display: inline-block;
+	width: 125px;
+}
+.board .detailcard_view .card_view {
+	pointer-events: inherit;
+	width: 55%;
+	padding: 10px;
+	margin: 45px auto 90px auto;
+	border-radius: 4px;
+	color: #4d4d4d;
+	box-sizing: border-box;
+	background: #ddd;
+}
+
+.detailcard_view .card_view h2 {
+	display: inline-block;
+	color: inherit;
+	height: 25px;
+}
+.card_view i {
+	font-weight: normal;
+	margin: 0 5px;
+	font-size: 1.2em;
+}
+.details {
+	cursor: pointer;
+	clear: both;
+}
+.underline {
+	text-decoration: underline;
+}
+.card_view .labels li,
+.card_view .add_label {
+	display: inline-block;
+	width: 40px;
+	height: 30px;
+	border-radius: 4px;
+}
+.card_view .add_label,
+.card_view ul {
+	display: inline-block;
+}
+.card_view .add_label {
+	vertical-align: top;
+	border-radius: 0;
+	background: rgba(0, 0, 0, .2);
+}
+.add_label .fa-plus {
+	cursor: pointer;
+	padding: 6px 8px;
+}
+.description textarea,
+.comment textarea {
+	display: block;
+	font-weight: normal;
+	font-size: 1em;
+	overflow: hidden;
+	resize: none;
+	width: 100%;
+	background: rgba(0, 0, 0, .1);
+}
+
+.description form,
+.comment form {
+	display: block;
+}
+
+.description a {
+	color: inherit;
+}
+.comment textarea {
+	padding: 10px;
+	background: #fff;
+	margin: 0 0 10px 0;
+}
+
+.comment h3,
+.activity h3 {
+	display: inline-block;
+}
+.card_view div.left {
+	width: 70%;
+}
+.card_view div.right {
+	width: 24%;
+}
+.actions > ul > li {
+	position: relative;
+	padding: 10px 0;
+	margin: 5px 0;
+	height: 40px;
+	width: 175px;
+	border-radius: 4px;
+	background: rgba(0, 0, 0, .1);
+	font-weight: bold;
+}
+.actions > ul > li:hover {
+	background: rgba(0, 0, 0, .3);
+}
+.card_view .details {
+	padding-left: 40px;
+}
+.details h3 {
+	padding: 8px 0;
+	font-size: 1em;
+	font-weight: normal;
+}
+.comment h3,
+.activity h3,
+.actions h3 {
+	padding: 8px 0;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.comment i,
+.activity i {
+	margin-left: -30px;
+}
+.clear {
+	clear: both;
+}
+.actions .sub .fa-check {
+	display: none;
+	margin-left: 40px;
+}
+.actions .checked .fa-check {
+	display: inline-block;
+}
+.actions .green {
+	padding: 4px 3px;
+}
+.activity p {
+	display: inline-block;
+	width: auto;
+	padding: 15px;
+	margin: 10px 0;
+	border-radius: 4px;
+	background: white;
+}
+.activity span {
+	font-size: .8em;
+	display: block;
+	padding-bottom: 10px;
+}
+.activity div + div {
+	border-top: 1px solid rgba(0, 0, 0, .3);
+}
+.grey {
+	padding: 8px 8px 8px 0;
+	border-radius: 3px;
+	background: rgba(0, 0, 0, .2);
+}
+.f {
+	margin-top: 5px;
+	padding-left: 5px;
+}
+.grey i {
+	cursor: pointer;
+	color: grey;
+	padding: 3px;
+	background: grey;
+}
+.grey i:hover {
+	color: #fff;
+}
+
+/* scrollbar */
+
+.scrollbar::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+.scrollbar::-webkit-scrollbar {
+	width: 8px;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgba(0, 0, 0, .2);
+}
+
+/* labels */
+
+.labels_list,
+.move,
+.copy {
+	display: none;
+	position: fixed;
+	width: 320px;
+	top: 150px;
+	right: 200px;
+	z-index: 9;
+	padding: 10px;
+	background: #fff;
+	cursor: default;
+}
+.labels_list {
+	padding: 5px 0 5px 5px;
+}
+.labels_container {
+	overflow-y: scroll;
+	height: 480px;
+}
+/* .labels_list {
+	display: block;
+} */
+.labels_list .create_label li {
+	width: 45px;
+	margin: 5px;
+}
+.labels_list .create_label li i:hover,
+.labels_list .create_label li i {
+	background: transparent;
+}
+.createlabel_container {
+	padding: 10px;
+}
+.createlabel_container .green {
+	padding: 10px 20px;
+}
+ .create_label {
+ 	display: none;
+	margin-top: 0px;
+} 
+.labels_list li span {
+	color: #fff;
+	padding: 5px 0 0 5px;
+}
+.copy {
+	display: none;
+}
+.move, .copy {
+	padding: 0;
+}
+table, tbody {
+	width: 100%
+}
+tr {
+	width: 100%;
+}
+.move form,
+.copy form {
+	box-sizing: content-box;
+	padding: 10px;
+}
+.movet {
+	display: block;
+}
+.labels_list h4 ,
+.create_label h4,
+.move h4,
+.copy h4 {
+	text-align: center;
+	padding: 5px 0 10px 0;
+}
+.labels_list ul {
+	padding: 10px 0;
+	width: 300px;
+}
+.labels_list li span {
+	width: 80%;
+	height: 100%;
+	display: inline-block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	cursor: pointer;
+	overflow: hidden;
+}
+.labels_list li span:hover {
+	border-left: 10px solid rgba(0, 0, 0, .4)
+}
+.labels_list li span i {
+	color: #fff;
+}
+.labels_list li i {
+	display: inline-block;
+	width: 13%;
+	height: 100%;
+	padding: 5px 5px 5px 10px;
+	border-radius: 4px;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+.labels_list li > i:hover {
+	background: rgba(0, 0, 0, .3);
+}
+.labels_list li {
+	width: 100%;
+	height: 30px;
+	margin: 4px 0;
+	display: inline-block;
+	margin-left: 5px;
+}
+.labels_list .fa-check {
+	display: inline-block;
+}
+h3 a.create_new_label {
+	color: inherit;
+}
+.labels_list input[type="text"] {
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	margin: 20px 0 10px 0;
+}
+.chosen {
+	content: "\f00c"
+}
+
+.create_label h4,
+.move h4,
+.copy h4,
+.labels_list h4 {
+	border-bottom: 1px solid #ddd;
+}
+.create_label h3 {
+	font-size: 1em;
+	overflow: hidden;
+}
+.create_label ul {
+	width: 100%;
+}
+.create_label li {
+	height: 40px;
+	border-radius: 4px;
+	vertical-align: top;
+	margin: 5px 0;
+	cursor: pointer;
+}
+.create_label li:hover {
+	background: rgba(0, 0, 0, .2);
+}
+.create_label li i {
+	vertical-align: middle;
+	padding: 10px;
+	color: #fff;
+}
+.create_label input[type="text"] {
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	background: rgba(0, 0, 0, .1);
+	margin: 6px 0;
+}
+.create_label span {
+	font-weight: bold;
+	display: block;
+	color: #4d4d4d;
+}
+.create_label .green,
+.move .green,
+.copy .green {
+	margin: 20px 0 10px 0;
+	padding: 10px 20px;
+}
+.create_label h5 {
+	margin-left: 8px;
+	display: inline-block;
+	width: 70%;
+	text-align: left;
+	font-weight: normal;
+	color: grey;
+}
+.create_label  h4 i {
+	cursor: pointer;
+}
+.create_label h4 i.right,
+.move h4 i.right,
+.copy h4 i.right,
+.labels_list h4 i.right {
+	vertical-align: top;
+	padding: 0;
+	margin: -10px 0 0 0;
+	cursor: pointer;
+}
+.move form {
+	background: transparent;
+}
+.select {
+	display: inline-block;
+	margin: 10px;
+	width: 50%;
+	box-sizing: border-box;
+	padding: 5px;
+	border-radius: 4px;
+	background: rgba(0, 0, 0, .3);
+}
+.move .select h5,
+.copy .select h5 {
+	padding: 3px;
+}
+.select select {
+	width: 100%;
+	font-size: 1.2em;
+	font-weight: bold;
+	background: rgba(0, 0, 0, 0);
+	border: none;
+}
+.select + .select {
+	width: 35%;
+}
+.copy form {
+	display: block;
+	background: #fff;
+}
+.copy h5 {
+	margin: 15px 0 5px 0;
+}
+.copy textarea {
+	display: block;
+	font-size: 1em;
+	font-weight: normal;
+	border: 1px solid #ddd;
+	padding: 5px;
+	margin: 5px 0;
+}
+.copy dt {
+	font-weight: normal;
+}
+.copy dl {
+	margin: 10px 0;
+}
+
+/* Search */
+td:first-child {
+	width: 40%;
+  background: linear-gradient(to bottom, 
+  	rgba(240,240,240,0) 
+  	,rgba(240,240,240,0)
+  	50%,#f0f0f0 85%,#f0f0f0 100%);
+}
+#search_results td + td {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+	width: 60%;
+}
+td .card > a {
+	display: block;
+	top: none;
+	position: relative;
+}
+#search_results h2 {
+	color: #4d4d4d;
+}
+
+td {
+	margin: 20px 0;
+}
+#search_results td a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	text-align: left;
+}
+#search_results .card {
+	width: 80%;
+	margin: 0 auto;
+	height: 60px;
+  overflow: hidden;
+}
+#search_results .card:hover {
+	width: 100%;
+	height: 100px;
+	z-index: 3;
+}
+#search_results td h3 a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+#search_results footer {
+	font-size: 1.2em;
+	margin: 10px 0 10px 25px;
+}
+#search_results footer p {
+	font-weight: bold;
+}
+#search_results h6 {
+	text-align: center;
+	margin: 20px 0;
+}
+
+#search_results h6 span,
+#search_results h6 i,
+#search_results h6 img {
+	vertical-align: middle;
+}
+#search_results h6 span {
+	margin-left: 10px;
+}
+div.labels {
+	min-height: 10px;
+}
+.card {
+	position: relative;
+}
+.card .labels li {
+	width: auto;
+	min-width: 40px;
+	vertical-align: top;
+	padding: 5px 8px;
+	color: #fff;
+}
+ .overlay {
+ 	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 12;
+	background: rgba(0, 0, 0, .5);
+	cursor: default;
+} 
+ .card .edit_card_name {
+ 	display: none;
+	width: 500px;
+	height: 80px;
+	/*position: fixed;
+	z-index: 12;
+	height: 200px;*/
+} 
+.card .edit_card_name form {
+	padding: 10px;
+	overflow-y: scroll;
+	width: 500px;
+	height: 100%;
+	position: absolute;
+	top: -5px;
+	left: -5px; 
+	margin-left: -5px;
+	z-index: 22;
+	padding: 0 5px;
+	display: block;
+	background: inherit;
+}
+.card .edit_card_name form textarea {
+	padding: 5px;
+	margin: 5px;
+	font: inherit;
+	width: 250px;
+	height: 60px;
+	border: none;
+	border-radius: 5px;
+	resize: none;
+	background: rgba(255, 255, 255, 1);
+	display: block;
+}
+.card .edit_card_name .green {
+	vertical-align: top;
+	width: 80px;
+	margin-left: 5px;
+	display: block;
+}
+.list .list_container .empty {
+	height: 0;
+	padding: 0;
+}
+.tilt {
+	transform: rotate(3deg);
+}
+.gooner {
+	margin-right: 10px;
+	display: inline-block;
+}
+.gooner .empty {
+	width: 0;
+}
+.list_view {
+	display: inline-block;
+}
+.description form {
+	display: none;
+}
+
+#sandbox-container {
+	display: inline-block;
+	width: 200px;
+}
+div.datepicker {
+	width: 210px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background: white;
+}
+.datepicker div {
+	display: block;
+}
+.page_indicator {
+	padding-top: 8px;
+}
+
+
+
+#notifications {
+	display: none;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+	padding: 10px;
+	width: 600px;
+	max-height: 500px;
+	z-index: 2;
+	color: #333;
+	text-align: left;
+	overflow: auto;
+	box-sizing: border-box;
+	font-weight: normal;
+	font-size: 1em;
+	border-radius: 4px;
+	background: #E2E4E6;
+}
+#notifications h2 {
+	color: #4d4d4d;
+	text-align: center;
+	overflow: hidden;
+}
+#notifications li {
+	width: 99%;
+	padding: 0;
+}
+#notifications a {
+	width: 100%;
+	display: block;
+	word-wrap: break-word;
+}
+#notifications a div {
+	word-wrap: normal;
+	width: 100%;
+	box-sizing: border-box;
+	height: auto;
+	display: inline-block;
+	padding: 10px;
+	margin: 5px 0;
+	background: #d4d4d4;
+	border-radius: 4px;
+	word-wrap: break-word;
+	overflow: auto;
+	color: #4d4d4d;
+}
+#notifications h2 i {
+	cursor: pointer;
+	font-size: 1.3em;
+}
